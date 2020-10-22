@@ -2,6 +2,7 @@
 var scores, activePlayer, firstPick, secondPick, firstTileNumber, secondTileNumber, tilesCount, arrTotal;
 tilesCount;
 
+
 //setTimeout(function(){ init() }, 700);
 init();
 function init() 
@@ -13,8 +14,13 @@ function init()
     secondTileNumber = 0;
     scores = [0, 0];
     activePlayer = 0;
-    roundScore = 0;
     
+    
+    if (screen.height > screen.width){
+    screen.orientation.lock('landscape');
+    }
+
+
     var input = document.querySelector('.final-score').value;
     //document.querySelector('.btn-new').style.display = 'none';
     document.querySelector('.final-score').style.display = 'none';

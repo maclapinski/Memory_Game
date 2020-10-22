@@ -36,7 +36,6 @@
 }
 
 body {
-    /* background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg); */
     background-size: cover;
     background-position: center;
     font-family: Lato;
@@ -62,7 +61,7 @@ body {
     width: 50%;
     float: left;
     height: 120px;
-    padding: 1px;
+    padding: 10px;
 }
 
 
@@ -79,6 +78,8 @@ body {
     font-weight: 100;
     margin-top: 20px;
     margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
     position: relative;
     color: rgb(22, 22, 77);
 }
@@ -99,8 +100,8 @@ body {
     font-size: 47px;
     position: absolute;
     color: #EB4D4D;
-    top: -5px;
-    right: 70px;
+    top: -8px;
+    right: 240px;
     
 }
 
@@ -127,6 +128,7 @@ body {
 button {
     position: absolute;
     width: 200px;
+    top: 75px;
     left: 50%;
     transform: translateX(-50%);
     color: #555;
@@ -143,13 +145,13 @@ button {
 }
 
 button:hover { font-weight: 600; background-color: #75a3d1;}
-button:hover i { margin-right: 20px; }
+/* button:hover i { margin-right: 20px; } */
 
 button:focus {
     outline: none;
 }
 
-i {
+/* i {
     color: #EB4D4D;
     display: inline-block;
     margin-right: 15px;
@@ -158,16 +160,16 @@ i {
     vertical-align: text-top;
     margin-top: -4px;
     transition: margin 0.3s;
-}
+} */
 
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; top: 16px; }
-.draw .player-name {font-weight: 300; color: #EB4D4D; top: 55px; right: 245px;
+.draw .player-name {font-weight: 300; color: #EB4D4D; top: 120px; right: 245px;
 }
 
 .tile{
-    padding: 20px;
+    padding: 5px;
     width: 120px;
 }
 .container {
@@ -177,13 +179,20 @@ i {
     text-align: center;
 }
 
+.bg {
+    background-image:none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    }
+
 @media (min-width: 1200px){
 .container 
     {
         width: 1000px !important;
     }
-}
-
 .bg {
     background-image:
     linear-gradient(to bottom, rgba(250, 249, 252, 0.52), rgba(56, 146, 197, 0.73));
@@ -192,4 +201,5 @@ i {
     background-size: cover;
     color: white;
     padding: 20px;
+    }
 }
