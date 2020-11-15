@@ -1,6 +1,6 @@
 ## Memory Game
 
-This is a game in which all of the tiles are laid face down and two tiles are flipped face up over each turn. The object 
+This is a game in which all of the tiles are laid face down and two cards are flipped face up over each turn. The object 
 of the game is to turn over pairs of matching tiles. When the player flips matching tiles he plays again.
 
 ### Preview
