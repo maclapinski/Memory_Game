@@ -17,7 +17,7 @@
 body {
   background-size: cover;
   background-position: center;
-  font-family: Lato;
+  font-family: 'Cabin', sans-serif;
   font-weight: 300;
   position: relative;
   height: 100vh;
@@ -55,22 +55,35 @@ label {
   margin-top: 20px;
 }
 .input-field {
-  position: absolute;
+  /* position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #555;
-  background: #bfd9f3;
-  border: none;
-  font-family: Lato;
+  left: 50%; */
+  /* transform: translateX(-50%); */
+  width: 350px;
+  margin-inline: auto;
+  margin-block: 10px;
+  color: black;
+  /* border: 3px solid #bfd9f3; */
+  font-family: 'Cabin', sans-serif;
   font-size: 20px;
-  text-transform: uppercase;
   cursor: pointer;
-  font-weight: 300;
+  font-weight: 400;
   transition: background-color 0.3s, color 0.3s;
   border-radius: 4px;
   padding: 5px;
-  text-align: center;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.dificultyLvl{
+  display: none;
+}
+.form-check-input {
+  position: relative;
+  margin-left: 0;
+}
+.form-check {
+  padding-left: 0;
 }
 
 .tiles-number-form {
@@ -81,30 +94,69 @@ label {
 .form-control {
   display: inline;
   width: auto;
+  font-size: 1.2rem;
+}
+.options{
+  border: 2px solid #bfd9f3;
+  border-radius: 4px;
+  width: fit-content;
+  margin-inline: auto;
+}
+.btn-start{
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+.btn-new{
+  position: absolute;
+  width: 261px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.btn-restart{
+  position: absolute;
+  width: 261px;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.title{
+  color: #16324e;
+  text-align: center;
+  font-size: 4.9rem;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 button {
-  position: absolute;
+  /* position: absolute;
   width: 261px;
   top: 95px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
+  width: 350px;
+  margin-block: 10px;
   color: #555;
   background: #bfd9f3;
   border: none;
-  font-family: Lato;
+  font-family: 'Cabin', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
-  font-weight: 300;
+  font-weight: 400;
   transition: background-color 0.3s, color 0.3s;
   border-radius: 4px;
   padding: 5px;
 }
 
 button:hover {
-  font-weight: 600;
-  background-color: #75a3d1;
+  color: #fff;
+  background-color: #16324e;
 }
 /* button:hover i { margin-right: 20px; } */
 
@@ -126,7 +178,8 @@ button:focus {
 .container {
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-top: 150px;
+  min-height: 300px;
+  margin-top: 160px;
   text-align: center;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -141,31 +194,39 @@ button:focus {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
-  color: rgb(22, 22, 77);
+  color: darkgrey;
+  width: 300px;
+  margin-inline: auto;
 }
 
 .player-score {
   text-align: center;
   font-size: 30px;
   font-weight: 300;
-  color: #286b92;
+  color: darkgrey;
+  padding-bottom: 2px;
 }
 
 .active .player-name {
-  font-weight: 300;
+  font-weight: 400;
+  color: #286b92;
+  border: 2px solid;
 }
-
+.active .player-score{
+  font-weight: 400;
+  color: #286b92;
+}
 .active .player-name::after {
-  content: "\2022";
+  /* content: "\2022";
   font-size: 47px;
   position: absolute;
   color: #286b92;
   top: -8px;
-  right: 270px;
+  right: 270px; */
 }
 
 .player-current-box {
@@ -210,7 +271,7 @@ button:focus {
 .draw .player-name {
   font-weight: 300;
   color: #eb4d4d;
-  top: 150px;
+  top: 160px;
   right: 300px;
 }
 
@@ -234,7 +295,7 @@ button:focus {
     min-width: 760px !important;
   } */
   .input-field {
-    top: 30px;
+    /* top: 30px; */
   }
 }
 
@@ -333,11 +394,11 @@ button:focus {
 
 @media (min-height: 400px) {
   .active .player-name::after {
-    content: "\2022";
+    /* content: "\2022";
     font-size: 47px;
     position: absolute;
     color: #286b92;
     top: -8px;
-    left: 30px !important;
+    left: 30px !important; */
   }
 }

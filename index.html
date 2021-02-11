@@ -8,19 +8,21 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <!-- <link
       href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/tile-back.png" />
     <meta
       property="og:image"
       content="https://maclapinski.github.io/Memory_Game/img/preview.png"
@@ -32,16 +34,10 @@
   <body>
     <div class="bg">
       <div class="wrapper clearfix">
-        <div class="input-field">
-          <label for="exampleFormControlSelect1">Number of Tiles</label>
-          <select class="form-control" id="numberOfTiles">
-            <option>24</option>
-            <option>16</option>
-            <option>8</option>
-          </select>
-        </div>
+        <div class="title">Memory Game</div>
         <button class="btn-new">New Game</button>
-        <div class="player-0-panel active">
+        <button class="btn-restart">Game Settings</button>
+        <div class="player-0-panel">
           <div class="player-name" id="name-0">
             Player 1
             <div class="player-score" id="score-0">0</div>
@@ -55,7 +51,45 @@
         </div>
 
         <div class="container" id="tiles">
-          <input type="text" placeholder="# of tiles" class="final-score" />
+          <div class="controls">
+            
+            <div class="options"> 
+              <div class="input-field">
+              <label for="">Number of tiles</label>
+              <select class="form-control" id="numberOfTiles">
+                <option value="24">24</option>
+                <option value="16">16</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <div class="form-check">
+                
+                <label class="form-check-label" for="">
+                  Single player mode
+                </label>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="singlePlayerCheckbox"
+                  onclick="playModeSelector(this.checked)"
+                />
+              </div>
+            </div>
+
+            <div class="input-field dificultyLvl">
+              <label for="">Dificulty level</label>
+              <select class="form-control" id="dificultyLvl">
+                <option value="2">Easy</option>
+                <option value="3">Medium</option>
+                <option value="4">Hard</option>
+              </select>
+            </div>
+
+            </div>
+           
+            <button class="btn-start">Start</button>
+          </div>
         </div>
       </div>
     </div>
